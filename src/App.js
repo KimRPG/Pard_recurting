@@ -1,25 +1,45 @@
-import logo from './logo.svg';
-import './App.css';
+import React, { useEffect, useState } from 'react';
+import styled from 'styled-components';
 
-function App() {
+const StyledWrapper = styled.div`
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+  overflow: auto;
+`;
+
+const StyledText = styled.h1`
+  font-size: 48px;
+  font-weight: bold;
+`;
+
+const App = () => {
+  const [index, setIndex] = useState(0);
+  const texts = ['기획자', '디자이너', '개발자'];
+
+  useEffect(() => {
+    const handleScroll = () => {
+      const scrollY = window.scrollY;
+      const newIndex = Math.floor(scrollY / window.innerHeight);
+       setIndex(newIndex);
+    };
+
+    window.addEventListener('scroll', handleScroll);
+
+    return () => {
+      window.removeEventListener('scroll', handleScroll);
+    };
+  },
+    []);
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <StyledWrapper>
+      <StyledText>
+        [{texts[index]}], 화이팅!
+      </StyledText>
+    </StyledWrapper>
   );
-}
+};
 
 export default App;
