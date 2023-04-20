@@ -1,45 +1,22 @@
-import React, { useEffect, useState } from 'react';
-import styled from 'styled-components';
+import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
+import AboutPage from './pages/AboutPage';
+import HomePage from './pages/HomePage';
+import InquiryPage from './pages/InquiryPage';
+import ProjectPage from './pages/ProjectPage';
+import RecruitingPage from './pages/RecruitingPage';
+import ScrollToTop from './components/ScrollToTop';
 
-const StyledWrapper = styled.div`
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  height: 100%;
-  overflow: auto;
-`;
-
-const StyledText = styled.h1`
-  font-size: 48px;
-  font-weight: bold;
-`;
-
-const App = () => {
-  const [index, setIndex] = useState(0);
-  const texts = ['기획자', '디자이너', '개발자'];
-
-  useEffect(() => {
-    const handleScroll = () => {
-      const scrollY = window.scrollY;
-      const newIndex = Math.floor(scrollY / window.innerHeight);
-       setIndex(newIndex);
-    };
-
-    window.addEventListener('scroll', handleScroll);
-
-    return () => {
-      window.removeEventListener('scroll', handleScroll);
-    };
-  },
-    []);
-
-  return (
-    <StyledWrapper>
-      <StyledText>
-        [{texts[index]}], 화이팅!
-      </StyledText>
-    </StyledWrapper>
-  );
+function App() {
+    return <Router>
+        <ScrollToTop/>
+        <Routes>
+            <Route path="/" element={<HomePage />} />
+            <Route path="/About" element={<AboutPage />} />
+            <Route path="/Inquiry" element={<InquiryPage />} />
+            <Route path="/Recruting" element={<RecruitingPage />} />
+            <Route path='/Project' element={<ProjectPage />} />
+        </Routes>
+    </Router>;
 };
 
 export default App;

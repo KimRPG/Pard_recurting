@@ -1,13 +1,17 @@
-body {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+ @font-face {
+  font-family: "NanumSquare Neo";
+  font-weight: 400;
+  src: url('./assets/font/NanumSquareNeo-bRg.ttf') format("ttf");
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+@font-face {
+  font-family: "NanumSquare Neo";
+  font-weight: 700;
+  src: url("./assets/font/NanumSquareNeo-cBd.ttf") format("ttf");
+}
+
+@font-face {
+  font-family: "NanumSquare Neo";
+  font-weight: 800;
+  src: url("./assets/font/NanumSquareNeo-dEb.ttf") format("ttf");
 }
