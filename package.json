@@ -1,7 +1,7 @@
 {
   "name": "pard-website",
   "version": "0.1.0",
-  "homepage": "https://Club-PARD.github.io/pard-website",
+  "homepage": "https://Pard.Club.io",
   "private": true,
   "dependencies": {
     "@testing-library/jest-dom": "^5.16.5",
@@ -12,7 +12,6 @@
     "react": "^18.2.0",
     "react-carousel": "^4.3.0",
     "react-dom": "^18.2.0",
-    "react-gsap": "^3.2.1",
     "react-responsive-carousel": "^3.2.23",
     "react-router-dom": "^6.10.0",
     "react-scripts": "5.0.1",
@@ -45,8 +44,5 @@
       "last 1 firefox version",
       "last 1 safari version"
     ]
-  },
-  "devDependencies": {
-    "gh-pages": "^5.0.0"
   }
 }
