@@ -5,7 +5,6 @@ import styled from "styled-components";
 
 function AboutPage(){
     const AboutPageComponent = styled.div`
-           background-color: 'black';
         
     `;
     return (

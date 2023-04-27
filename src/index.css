@@ -15,3 +15,7 @@
   font-weight: 800;
   src: url("./assets/font/NanumSquareNeo-dEb.ttf") format("ttf");
 }
+
+body {
+  background-color: #1A1A1A;
+}

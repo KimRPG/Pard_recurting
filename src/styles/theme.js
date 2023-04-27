@@ -26,25 +26,30 @@ export const GlobalStyle = createGlobalStyle`
 
   body{
       font-family: "NanumSquare Neo";
+      background-color: #1A1A1A;
    }
 
 `;
-
+// https://nekocalc.com/px-to-rem-converter <<< rem 변환기 
 export const theme = {
     fontSizes: {
-        Header0: '96px',
-        Header1: '70px',
-        Header2: '60px',
-        Header3: '48px',
-        Header4: '34px',
-        Header5: '24px',
-        Header6: '20px',
-        Subtitle1: '16px',
-        Subtitle2: '14px',
-        Body1: '16px',
-        Body2: '14px',
-        ButtonText1: '16px',
-        Caption: '12px'
+        Header0: '6.6667vw',
+        Header1: '4.8611vw',
+        Header2: '4.1667vw', 
+        Header3: '3.3333vw',
+        Header4: '2.3611vw',
+        Header5: '1.6667vw',
+        Header6: '1.3889vw',
+        Header7: '2.7778vw',
+        Header8: '2.0833vw',
+        Subtitle1: '1.1111vw',
+        Subtitle2: '0.9722vw',
+        Subtitle3: '1.6667vw',
+        Body1: '1.1111vw',
+        Body2: '0.9722vw',
+        ButtonText1: '1.1111vw',
+        Caption1: '0.8333vw',
+        Caption: '0.8333vw'
     },
     fontWeights: {
         Header0: '800',
@@ -52,13 +57,20 @@ export const theme = {
         Header2: '800',
         Header3: '400',
         Header4: '400',
-        Header5: '400',
+        Header5: '700',
         Header6: '700',
+        Header7: '800',
+        Header8: '800',
         Subtitle1: '800',
         Subtitle2: '700',
+        Subtitle3: '400',
         Body1: '400',
         Body2: '400',
         ButtonText1: '700',
-        Caption: '400',
+        Caption1: '400',
+        Captiom: '400'
     },
+    NavBarColor: {
+        navbarColor: '#1A1A1A', // Navbar의 색상
+    }
 };

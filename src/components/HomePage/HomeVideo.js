@@ -1,7 +1,7 @@
 import React, { useRef, useEffect } from 'react';
 import { gsap } from 'gsap';
 
-const App = () => {
+const HomeVideo = () => {
   const videoRef = useRef(null); // 비디오 요소를 참조하기 위한 useRef
   const blueScreenRef = useRef(null); // 파란 배경 요소를 참조하기 위한 useRef
   const isPlayingRef = useRef(false); // 비디오 재생 여부를 저장하기 위한 useRef
@@ -27,7 +27,7 @@ const App = () => {
       const videoHeight = video.offsetHeight; // 비디오 요소의 높이
 
       if (video.readyState >= 2) {
-        const videoProgress = (scrollPosition - videoOffsetTop) / (videoHeight * 10); // 스크롤 위치에 따른 비디오 진행도 계산
+        const videoProgress = (scrollPosition - videoOffsetTop) / (videoHeight * 38); // 스크롤 위치에 따른 비디오 진행도 계산
         const currentTime = video.duration * videoProgress; // 비디오의 현재 시간 계산
 
         video.currentTime = currentTime; // 비디오의 현재 시간을 업데이트
@@ -77,27 +77,23 @@ const App = () => {
   }, []);
 
   return (
-    <div>
-      <div style={{ height: '10000px' }}>
+    <div >
+      <div style={{ height: '39000px' }}> 
+      {/* 33800px' */}
       </div>
       <video
         ref={videoRef}
-        src={require('./assets/BackGround_Video.mp4')}
+        src={require('../../assets/Video/BackGround_Video.mp4')}
         muted
+        quality="high"
         loop
-        style={{ position: 'fixed', top: 0, left: 0, width: '100%', height: '100%', objectFit: 'cover', zIndex: -1 }}
+        style={{ position: 'fixed', top: 0, left: 0, width: '100%', height: '100%', objectFit: "fill", zIndex: -1 }}
         onLoadedMetadata={() => {
           console.log('Video duration:', videoRef.current.duration);
         }}
       />
-      {/* gsap와 연결하여 해당 div로 스크롤 이동 */}
-      <div style={{ height: '100vh', backgroundColor: 'blue' }} ref={blueScreenRef}>
-        <h1 style={{ textAlign: 'center', color: 'white', paddingTop: '40vh' }}>
-          연습중..
-        </h1>
-      </div>
     </div>
   );
 };
 
-export default App;
+export default HomeVideo;
