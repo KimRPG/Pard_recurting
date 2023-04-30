@@ -15,6 +15,7 @@ import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
              <Route path="/Inquiry" element={<InquiryPage />} />
              <Route path="/Recruting" element={<RecruitingPage />} />
              <Route path='/Project' element={<ProjectPage />} />
+             <Route path='/pard-website' element={<HomePage />} />
          </Routes>
      </Router>;
 };
