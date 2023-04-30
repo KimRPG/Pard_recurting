@@ -1,13 +1,13 @@
 import styled, { ThemeProvider } from 'styled-components';
-import { theme } from '../../styles/theme';
-import DesignerImage from '../../assets/img/Designer_part.png'; 
-import PlanerImage from '../../assets/img/Planner_parts.png'; 
-import APPImage from '../../assets/img/App_part.png'; 
-import WEBImage from '../../assets/img/Web_part.png'; 
-import SERVERImage from '../../assets/img/Server_part.png'; 
+import { theme } from '../../../styles/theme';
+import DesignerImage from '../../../assets/img/Designer_part.png'; 
+import PlanerImage from '../../../assets/img/Planner_parts.png'; 
+import APPImage from '../../../assets/img/App_part.png'; 
+import WEBImage from '../../../assets/img/Web_part.png'; 
+import SERVERImage from '../../../assets/img/Server_part.png'; 
 
 const Header2 = styled.div`
-  font-size: ${props => props.theme.fontSizes.Header2};
+  font-size: ${props => props.theme.Web_fontSizes.Header2};
   font-weight: ${props => props.theme.fontWeights.Header2};
   color: #FFFFFF;
   font-family: 'NanumSquare Neo';
@@ -16,7 +16,7 @@ const Header2 = styled.div`
 `;
 
 const Header5 = styled.div`
-    font-size: ${props => props.theme.fontSizes.Header5};
+    font-size: ${props => props.theme.Web_fontSizes.Header5};
     font-weight: ${props => props.theme.fontWeights.Header5};
     color: #FFFFFF;
     font-family: 'NanumSquare Neo';
@@ -30,7 +30,7 @@ const Header5 = styled.div`
 `;
 
 const Body2 = styled.div`
-    font-size: ${props => props.theme.fontSizes.Body2};
+    font-size: ${props => props.theme.Web_fontSizes.Body2};
     font-weight: ${props => props.theme.fontWeights.Body2};
     color: white;
     font-family: 'NanumSquare Neo';

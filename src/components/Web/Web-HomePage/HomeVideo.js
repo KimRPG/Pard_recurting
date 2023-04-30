@@ -83,7 +83,7 @@ const HomeVideo = () => {
       </div>
       <video
         ref={videoRef}
-        src={require('../../assets/Video/BackGround_Video.mp4')}
+        src={require('../../../assets/Video/BackGround_Video.mp4')}
         muted
         quality="high"
         loop

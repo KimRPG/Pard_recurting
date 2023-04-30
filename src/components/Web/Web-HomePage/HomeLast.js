@@ -1,8 +1,8 @@
 import styled, { ThemeProvider } from 'styled-components';
-import { theme } from '../../styles/theme';
+import { theme } from '../../../styles/theme';
 
 const Header2 = styled.div`
-  font-size: ${props => props.theme.fontSizes.Header2};
+  font-size: ${props => props.theme.Web_fontSizes.Header2};
   font-weight: ${props => props.theme.fontWeights.Header2};
   color: #FFFFFF;
   font-family: 'NanumSquare Neo';
@@ -17,15 +17,14 @@ const PartDiv = styled.div`
     height: 62vw;
 `;
 
-function HomeMentor() {
-
+function HomeLast() {
     return (
         <PartDiv>
              <ThemeProvider theme={theme}>
-            <Header2>Mentor</Header2>
+            <Header2>Last</Header2>
             </ThemeProvider>
         </PartDiv>
     );
 }
 
-export default HomeMentor;
+export default HomeLast;
